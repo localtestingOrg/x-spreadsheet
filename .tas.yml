@@ -1,14 +1,16 @@
 framework: mocha
-postMerge:
-  pattern: 
-    - "./test/locale/*.js"
-preMerge:
-  pattern:
-    - "./test/locale/*.js"
 preRun:
      command:
         - npm install
+        - npm run build
+preMerge:
+  pattern:
+    - "./test/core/*.js"
+postMerge:
+  pattern: 
+    - "./test/core/*.js"
 postRun:
      command:
         - node --version
+configFile: "mocharc.yml"
 version: 1.0
