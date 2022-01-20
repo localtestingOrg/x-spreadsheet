@@ -5,12 +5,12 @@ preRun:
         - npm run build
 preMerge:
   pattern:
-    - "./test/core/*.js"
+    - "./test/**/*.js"
 postMerge:
   pattern: 
-    - "./test/core/*.js"
+    - "./test/**/*.js"
 postRun:
      command:
         - node --version
-configFile: "mocharc.yml"
+configFile: "mocha.opts"
 version: 1.0
