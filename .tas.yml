@@ -12,5 +12,5 @@ postMerge:
 postRun:
      command:
         - node --version
-configFile: "test/mocha.opts"
+configFile: "./test/mocha.opts"
 version: 1.0
